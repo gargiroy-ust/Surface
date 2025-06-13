@@ -1,0 +1,3 @@
+[submodule "Submarines"]
+	path = Submarines
+	url = https://github.com/gargiroy-ust/Submarines.git

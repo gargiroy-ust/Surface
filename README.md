@@ -21,14 +21,14 @@ A Git submodule is a way to include another Git repository within your own proje
 
 ## Adding a Submodule 
 
-git submodule add https://github.com/your-username/submarines.git submarines
+git submodule add https://github.com/your-username/submarines.git submarines  
 This creates a .gitmodules file that tracks submodule settings.
 
--Sample .gitmodules file
-[submodule "submarines"]
-    path = submarines
-    url = https://github.com/your-username/submarines.git
-    branch = main
+-Sample .gitmodules file  
+[submodule "submarines"]  
+path = submarines  
+url = https://github.com/your-username/submarines.git
+branch = main
 Optional: Add branch = main manually if you want git submodule update --remote to fetch from main.
 
 ##  How to Clone This Project with Submodules

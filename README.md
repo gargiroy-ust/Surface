@@ -16,6 +16,12 @@ A Git submodule is a way to include another Git repository within your own proje
 - Keeping separate version histories for modular parts.
 - Avoiding copy-pasting code between projects.
 
+## Adding a Submodule 
+bash
+
+git submodule add https://github.com/your-username/submarines.git submarines
+This creates a .gitmodules file that tracks submodule settings.
+
 ##  How to Clone This Project with Submodules
 
 in git bash run the below command:
@@ -35,46 +41,26 @@ git submodule update --remote
 
 Tells Git to:
 
-Go into each submodule
-
-Fetch from its remote origin
-
-Checkout the latest commit on the configured branch (e.g., main)
-
+1. Go into each submodule
+2. Fetch from its remote origin
+3. Checkout the latest commit on the configured branch (e.g., main)
 Then, in your parent repo, you’ll see that the submodule pointer has moved to this newer commit.
 
-🔧 Example
-Let's say your submarines submodule has a new commit pushed to its main branch:
-
 bash
-Copy
-Edit
-cd surface
-git submodule update --remote
-➡️ Git goes into submarines, pulls the latest commit from its remote main branch, and checks it out.
-
-But remember:
-This does NOT automatically commit the change to the parent repo.
-You still need to do this:
-
-bash
-Copy
-Edit
-git add submarines
+git add .
 git commit -m "Update submarines submodule to latest commit"
 git push
-⚙️ Configuration
+# Configuration
 You can configure which branch a submodule tracks:
 
-bash
-Copy
-Edit
 # Inside your submodule folder
 git checkout main
 
 # Back in root repo
 git config -f .gitmodules submodule.submarines.branch main
 This makes --remote always fetch from the main branch of the submarines submodule.
+
+
 
 
 

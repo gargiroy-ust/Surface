@@ -20,7 +20,6 @@ A Git submodule is a way to include another Git repository within your own proje
 - Avoiding copy-pasting code between projects.
 
 ## Adding a Submodule 
-bash
 
 git submodule add https://github.com/your-username/submarines.git submarines
 This creates a .gitmodules file that tracks submodule settings.

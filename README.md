@@ -4,10 +4,12 @@ highlight modular and reusable code design.
 You want to be able to treat the two projects as separate yet still be able to use one from within the other.
 
 ## Project Structure
-surface/
-├── submarines/ # Git submodule (external repo)
+```surface/
+├── submarines/       # Git submodule (external repo)
+├── .gitmodules       # Tracks submodule path and URL
 ├── main.py
 └── README.md
+
 
 ## What is a Git Submodule?
 
@@ -21,6 +23,13 @@ bash
 
 git submodule add https://github.com/your-username/submarines.git submarines
 This creates a .gitmodules file that tracks submodule settings.
+
+-Sample .gitmodules file
+[submodule "submarines"]
+    path = submarines
+    url = https://github.com/your-username/submarines.git
+    branch = main
+Optional: Add branch = main manually if you want git submodule update --remote to fetch from main.
 
 ##  How to Clone This Project with Submodules
 
@@ -50,13 +59,14 @@ bash
 git add .
 git commit -m "Update submarines submodule to latest commit"
 git push
-# Configuration
+
+- Configuration
 You can configure which branch a submodule tracks:
 
-# Inside your submodule folder
+- Inside your submodule folder
 git checkout main
 
-# Back in root repo
+- Back in root repo
 git config -f .gitmodules submodule.submarines.branch main
 This makes --remote always fetch from the main branch of the submarines submodule.
 

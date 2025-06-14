@@ -70,6 +70,19 @@ git checkout main
 git config -f .gitmodules submodule.submarines.branch main
 This makes --remote always fetch from the main branch of the submarines submodule.
 
+## Example Usage
+main.py demonstrates how to use a function from the submarines module:  
+
+import sys
+sys.path.append('submarines')
+
+import helper
+
+helper.greet()
+
+
+
+
 
 
 

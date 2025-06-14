@@ -4,7 +4,8 @@ highlight modular and reusable code design.
 You want to be able to treat the two projects as separate yet still be able to use one from within the other.
 
 ## Project Structure
-```surface/
+surface/
+```
 ├── submarines/       # Git submodule (external repo)
 ├── .gitmodules       # Tracks submodule path and URL
 ├── main.py

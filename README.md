@@ -42,33 +42,29 @@ git submodule update --init --recursive
 
 ## Pulling in Upstream Changes from the Submodule Remote
 
-When you add a submodule, it tracks a specific commit, not a branch.
+git submodule update --remote  
+git add .
+git commit -m "Update submarines submodule to latest commit"
+git push
+
+Note:
+When you add a submodule, it tracks a specific commit, not a branch.  
 So even if the submodule repo is updated (new commits), your project won’t see them unless you update it manually.
 
-bash
-git submodule update --remote
-
-Tells Git to:
-
+Tells Git to:  
 1. Go into each submodule
 2. Fetch from its remote origin
 3. Checkout the latest commit on the configured branch (e.g., main)
 Then, in your parent repo, you’ll see that the submodule pointer has moved to this newer commit.
 
-bash
-git add .
-git commit -m "Update submarines submodule to latest commit"
-git push
-
-- Configuration
-You can configure which branch a submodule tracks:
+Note:  
+You can configure which branch a submodule tracks:  
+This makes --remote always fetch from the main branch of the submarines submodule.
 
 - Inside your submodule folder
 git checkout main
-
 - Back in root repo
 git config -f .gitmodules submodule.submarines.branch main
-This makes --remote always fetch from the main branch of the submarines submodule.
 
 # Merging latest commit from remote with local
 cd surface  

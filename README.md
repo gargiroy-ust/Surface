@@ -1,5 +1,5 @@
 **Surface** is a project demonstrating how to use and manage **Git submodules**.  
-It includes another GitHub repository — [submarines](https://github.com/your-username/submarines) — as a submodule to 
+It includes another GitHub repository — [submarines](https://github.com/gargiroy-ust/submarines)— as a submodule to 
 highlight modular and reusable code design.
 You want to be able to treat the two projects as separate yet still be able to use one from within the other.
 
@@ -21,19 +21,19 @@ A Git submodule is a way to include another Git repository within your own proje
 
 ## Adding a Submodule 
 
-git submodule add https://github.com/your-username/submarines.git  
+git submodule add https://github.com/gargiroy-ust/Submarines.git
 This creates a .gitmodules file that tracks submodule settings.
 
 -Sample .gitmodules file  
 [submodule "submarines"]  
 path = submarines  
-url = https://github.com/your-username/submarines.git  
+url = https://github.com/gargiroy-ust/Submarines.git  
 branch = main  
 Optional: Add branch = main (manually if you want git submodule update --remote to fetch from main.)
 
 ##  How to Clone This Project with Submodules
 
-git clone --recurse-submodules https://github.com/your-username/surface.git
+git clone --recurse-submodules https://github.com/gargiroy-ust/surface.git
 
 If you've already cloned it without the --recurse-submodules flag, then follow these steps:  
 

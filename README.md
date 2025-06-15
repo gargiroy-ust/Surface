@@ -70,6 +70,18 @@ git checkout main
 git config -f .gitmodules submodule.submarines.branch main
 This makes --remote always fetch from the main branch of the submarines submodule.
 
+## Merging latest commit from remote with local
+cd surface  
+git submodule update --remote --merge  
+git add submarines
+git commit -m "Merged latest changes from submarines"
+git push
+
+# Best practices to avoid merge conflicts
+pull latest changes first  
+cd submarines  
+git pull origin main
+
 ## Example Usage
 main.py demonstrates how to use a function from the submarines module:  
 

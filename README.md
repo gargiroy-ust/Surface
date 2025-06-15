@@ -29,11 +29,10 @@ This creates a .gitmodules file that tracks submodule settings.
 path = submarines  
 url = https://github.com/your-username/submarines.git  
 branch = main  
-Optional: Add branch = main manually if you want git submodule update --remote to fetch from main.
+Optional: Add branch = main (manually if you want git submodule update --remote to fetch from main.)
 
 ##  How to Clone This Project with Submodules
 
-in git bash run the below command:
 git clone --recurse-submodules https://github.com/your-username/surface.git
 
 If you've already cloned it without the --recurse-submodules flag, then follow these steps:

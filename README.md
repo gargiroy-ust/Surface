@@ -62,9 +62,9 @@ You can configure which branch a submodule tracks:
 This makes --remote always fetch from the main branch of the submarines submodule.
 
 - Inside your submodule folder
-git checkout main
+  git checkout main
 - Back in root repo
-git config -f .gitmodules submodule.submarines.branch main
+  git config -f .gitmodules submodule.submarines.branch main
 
 # Merging latest commit from remote with local
 cd surface  

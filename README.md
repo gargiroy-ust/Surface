@@ -68,7 +68,7 @@ This makes --remote always fetch from the main branch of the submarines submodul
   
   git config -f .gitmodules submodule.submarines.branch main
 
-# Merging latest commit from remote with local
+## Merging latest commit from remote with local
 cd surface  
 git submodule update --remote --merge   
 git add submarines  

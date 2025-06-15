@@ -35,8 +35,9 @@ Optional: Add branch = main (manually if you want git submodule update --remote 
 
 git clone --recurse-submodules https://github.com/your-username/surface.git
 
-If you've already cloned it without the --recurse-submodules flag, then follow these steps:
-cd surface
+If you've already cloned it without the --recurse-submodules flag, then follow these steps:  
+
+cd surface  
 git submodule update --init --recursive
 
 ## Pulling in Upstream Changes from the Submodule Remote

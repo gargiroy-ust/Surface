@@ -81,7 +81,7 @@ pull latest changes first
 cd submarines  
 git pull origin main
 
-# Example Usage
+## Example Usage
 main.py demonstrates how to use a function from the submarines module:  
 
 import sys

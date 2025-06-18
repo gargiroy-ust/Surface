@@ -1,1 +1,3 @@
-import sys\nsys.path.append('Submarines')\nimport helper\nhelper.greet()
+import sys
+sys.path.append('Submarines')
+import helper\nhelper.greet()

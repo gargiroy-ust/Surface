@@ -1,0 +1,22 @@
+From 28505bf54faeeae1ad1d3e2449635807c5eb7d08 Mon Sep 17 00:00:00 2001
+From: gargi roy <Gargi.Roy@ust.com>
+Date: Fri, 20 Jun 2025 09:36:49 +0530
+Subject: [PATCH] g to G
+
+---
+ helper.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/helper.py b/helper.py
+index e408dd0..39ef05d 100644
+--- a/helper.py
++++ b/helper.py
+@@ -2,4 +2,4 @@ def greet():
+   print('Hello! This is Gargi')
+ 
+ def goodbye():
+-  print('goodbye!')
++  print('Goodbye!')
+-- 
+2.50.0.windows.1
+
